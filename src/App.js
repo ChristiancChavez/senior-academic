@@ -1,17 +1,10 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './App.css';
-import Form from './components/Form';
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-         <Form />
-        </header>
-      </div>
-    );
-  }
-}
+const App = props => (
+    <div className="App">
+      {props.children}
+    </div>
+);
 
 export default App;

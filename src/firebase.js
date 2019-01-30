@@ -1,4 +1,4 @@
-import firebase from 'firebase'
+import firebase from 'firebase';
 const config = {
     apiKey: "AIzaSyA2OXQ2V-SNgoKhZWP5uLLFxAPIAMuQe1U",
     authDomain: "seniors-academic-839c7.firebaseapp.com",
