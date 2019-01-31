@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import firebase from '../../firebase';
+import {storage} from '../../firebase';
 
 class Form extends Component {
   state = {
@@ -8,7 +9,9 @@ class Form extends Component {
     email: "",
     users: [],
     submitted: false,
-    error: false
+    error: false, 
+    image: null,
+    url: '',
   }
 
   componentDidMount() {
@@ -37,6 +40,33 @@ class Form extends Component {
 
     this.setState({
       [name] : value
+    });
+  }
+
+  handleChangeImage = e => {
+    if(e.target.files[0]) {
+      const image = e.target.files[0];
+      this.setState(() => ({image}));
+    }
+  }
+
+  handleUpload = () => {
+    const { image } = this.state;
+    const uploadTask = storage.ref(`images/${image.name}`).put(image);
+    uploadTask.on('state_changed',
+    (snapshot) => {
+
+    }, 
+    (error) => {
+      console.log(error);
+    },
+    () => {
+      storage.ref('images').child(image.name).getDownloadURL().then(url => {
+        console.log(url);
+        this.setState({
+          url 
+        })
+      })
     });
   }
 
@@ -79,7 +109,7 @@ class Form extends Component {
   }
   
   render() {
-    const { name, age, email, submitted, error } = this.state;
+    const { name, age, email, submitted, error, url } = this.state;
 
     return (
       <Fragment>
@@ -87,8 +117,9 @@ class Form extends Component {
           <input value={name} onChange={this.handleOnChange} type="text" name="name" placeholder="Put your name here"/>
           <input value={age} onChange={this.handleOnChange} type="number" name="age" placeholder="What's your age"/>
           <input value={email} onChange={this.handleOnChange} type="email" name="email" placeholder="What's your email"/>
-          <input type="file" />
-          <input type="submit" placeholder="Submit" />
+          <input type="file" onChange={this.handleChangeImage}/>
+          <img src={url} alt="uploaded images" height="300px" width="400px"/>
+          <input type="submit" placeholder="Submit" onClick={this.handleUpload}/>
         </form>
         
         {submitted ?

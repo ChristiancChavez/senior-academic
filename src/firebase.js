@@ -1,4 +1,5 @@
 import firebase from 'firebase';
+import 'firebase/storage';
 const config = {
     apiKey: "AIzaSyA2OXQ2V-SNgoKhZWP5uLLFxAPIAMuQe1U",
     authDomain: "seniors-academic-839c7.firebaseapp.com",
@@ -8,4 +9,8 @@ const config = {
     messagingSenderId: "361716339409"
 };
 firebase.initializeApp(config);
-export default firebase;
+
+const storage = firebase.storage();
+export {
+    storage, firebase as default
+}
