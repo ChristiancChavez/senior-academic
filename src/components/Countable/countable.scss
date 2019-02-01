@@ -1,0 +1,42 @@
+@media only screen and (max-width: 500px) {
+    .countable {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 35px;
+        &__title {
+            font-size: 11px;
+            text-align: center;
+            letter-spacing: 0.23em;
+            color: #FFFFFF;
+            margin-bottom: 10px;
+        }
+        .clock {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-between;
+            .time {
+                display: flex;
+                flex-direction: column;
+                border: 1px solid #C4C4C4;
+                text-align: center;
+                box-sizing: border-box;
+                padding: 5px 0px;
+                width: 100%;
+                &__number {
+                    font-weight: 200;
+                    line-height: 41px;
+                    font-size: 38px;
+                    color: #FFFFFF;
+                    align-self: center;
+                } 
+                &__reference {
+                    line-height: 10px;
+                    font-size: 9px;
+                    letter-spacing: 0.35em;
+                    color: #FFFFFF;
+                    padding-bottom: 4px;
+                }
+            }
+        }
+}
+}

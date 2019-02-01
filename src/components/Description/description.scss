@@ -1,0 +1,31 @@
+@media only screen and (max-width: 500px) {
+    .description {
+        display: flex;
+        flex-flow: column;
+        justify-content: space-between;
+        text-align: left;
+        &__title {
+            font-weight: 800;
+            font-style: normal;
+            line-height: 34px;
+            font-size: 31px;
+            letter-spacing: 0.04em;
+            color: #FFFFFF;
+            margin-bottom: 10px;
+            margin-top: 40px;
+            &--red {
+                color: #F81D27;  
+            }
+        }
+        &__advertisement {
+            width: 290px;
+            font-weight: 200;
+            font-style: normal;
+            line-height: 17px;
+            font-size: 12px;
+            letter-spacing: 0.01em;
+            color: #FFFFFF;
+            margin-bottom: 15px;
+        } 
+    }
+}

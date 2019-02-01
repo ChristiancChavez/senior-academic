@@ -1,0 +1,17 @@
+@media only screen and (max-width: 500px) {
+    .social {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        margin-top: 30px;
+        &__hastag {
+            color: white;
+        }
+        &__line {
+            width: 91px;
+            height: 1px;
+            background: white;
+            margin-top: 10px;
+        }
+    }
+}
