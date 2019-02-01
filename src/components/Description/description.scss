@@ -1,31 +1,49 @@
-@media only screen and (max-width: 500px) {
-    .description {
-        display: flex;
-        flex-flow: column;
-        justify-content: space-between;
-        text-align: left;
-        &__title {
-            font-weight: 800;
-            font-style: normal;
-            line-height: 34px;
-            font-size: 31px;
-            letter-spacing: 0.04em;
-            color: #FFFFFF;
-            margin-bottom: 10px;
-            margin-top: 40px;
-            &--red {
-                color: #F81D27;  
-            }
+.description {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    text-align: left;
+    &__title {
+        font-weight: 800;
+        font-style: normal;
+        line-height: 34px;
+        font-size: 31px;
+        letter-spacing: 0.04em;
+        color: #FFFFFF;
+        margin-bottom: 5%;
+        margin-top: 10%;
+        &--red {
+            color: #F81D27;  
         }
-        &__advertisement {
-            width: 290px;
-            font-weight: 200;
-            font-style: normal;
-            line-height: 17px;
-            font-size: 12px;
-            letter-spacing: 0.01em;
-            color: #FFFFFF;
+        @media only screen and (max-width: 550px) {
+            width: 300px;
+        }
+        @media only screen and (min-width: 550px) {
+            font-size: 40px;
+            width: 400px;
+            line-height: 45px;
+        }
+        @media only screen and (min-width: 700px) {
             margin-bottom: 15px;
-        } 
+            margin-top: 40px;
+        }
     }
+    &__advertisement {
+        width: 290px;
+        font-weight: 200;
+        font-style: normal;
+        line-height: 17px;
+        font-size: 12px;
+        letter-spacing: 0.01em;
+        color: #FFFFFF;
+        margin-bottom: 5%;
+        @media only screen and (min-width: 550px) {
+            font-size: 16px;
+            width: 390px;
+        }
+        @media only screen and (min-width: 700px) {
+            margin-bottom: 15px;
+        }
+    }
+    
 }
