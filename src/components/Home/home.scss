@@ -28,55 +28,90 @@
             display: none;
         }
     }
-    @media only screen and (min-width: 1000px) {
-        &__circletop {
+    &__circletop {
+        display: none;
+        @media only screen and (min-width: 1000px) {
             position: absolute;
             top: 0%;
-            right: 37%;
+            right: 30%;
+            display: block;
         }
-        &__circlerightbig {
+        
+    }
+    &__circlerightbig {
+        display: none;
+        @media only screen and (min-width: 1300px) {
+            position: absolute;
+            top: 23%;
+            right: 0%;
+            display: block;
+        }
+        
+    }
+    &__ellipsetop {
+        display: none;
+        @media only screen and (min-width: 1000px) {
             position: absolute;
             top: 25%;
-            right: 0%;
-        }
-        &__ellipsetop {
-            position: absolute;
-            top: 20%;
             right: 28%;
+            display: block;
         }
-        &__ellipsemiddle {
+    }
+    &__ellipsemiddle {
+        display: none;
+        @media only screen and (min-width: 1000px) {
             position: absolute;
             bottom: 29%;
             left: 45%;
-            @media only screen and (min-width: 1200px) {
-                bottom: 150px;
-                left: 45%;
-            }
+            display: block;
         }
-        &__ellipsebottom {
+        @media only screen and (min-width: 1200px) {
+            bottom: 24%;
+            left: 45%;
+        }
+    }
+    &__ellipsebottom {
+        display: none;
+        @media only screen and (min-width: 1000px) {
             position: absolute;
             bottom: 0%;
             left: 5%;
+            display: block;
         }
-        &__pointstopsquare {
+        @media only screen and (min-width: 1200px) {
+            left: 4%;
+        }
+    }
+    &__pointstopsquare {
+        display: none;
+        @media only screen and (min-width: 1000px) {
             position: absolute;
             top: 0%;
             right: 22%;
+            display: block;
         }
-        &__pointsmiddle {
+    }
+    &__pointsmiddle {
+        display: none;
+        @media only screen and (min-width: 1000px) {
             position: absolute;
             bottom: 14%;
             left: 32.5%;
-            @media only screen and (min-width: 1200px) {
-                bottom: 40px;
-                left: 413px;
-            }
+            display: block;
         }
-        &__pointsbottom {
+        @media only screen and (min-width: 1200px) {
+            bottom: 8%;
+            left: 30%;
+        }
+    }
+    &__pointsbottom {
+        display: none;
+        @media only screen and (min-width: 1200px) {
             position: absolute;
             bottom: 0%;
-            right: 540px;
-            height: 190px;
+            right: 40%;
+            height: 230px;
+            display: block;
         }
     }
 }
