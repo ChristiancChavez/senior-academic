@@ -3,8 +3,12 @@
     flex-direction: column;
     margin-bottom: 35px;
     @media only screen and (min-width: 700px) {
-        width: 85%;
+        width: 500px;
     }
+    @media only screen and (min-width: 1000px) {
+        width: 360px;
+    }
+    
     &__title {
         font-size: 11px;
         text-align: center;
@@ -16,6 +20,9 @@
         }
         @media only screen and (min-width: 700px) {
             text-align: left;
+        }
+        @media only screen and (min-width: 1000px) {
+            font-size: 11px;
         }
     }
     .clock {
