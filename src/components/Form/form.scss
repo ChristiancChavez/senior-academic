@@ -1,0 +1,112 @@
+.register {
+    background: linear-gradient(180deg, #000000 47.6%, #230000 100%);
+    height: 100vh;
+    padding: 40px;
+    padding-bottom: 10px;
+    position: relative;
+    &__close {
+        position: absolute;
+        top: 7%;
+        right: 10%;
+        width: 25px;
+    }
+    &__circletopregister {
+        display: none;
+        width: 350px;
+        @media only screen and (min-width: 800px) {
+            display: block;
+            position: absolute;
+            top: 17%;
+            right: 0%;
+        }
+        @media only screen and (min-width: 1100px) {
+            width: 400px;
+            top: 19%;
+            right: 0%;
+        }
+    }
+    &__circlerightregister {
+        display: none;
+        width: 250px;
+        @media only screen and (min-width: 800px) {
+            display: block;
+            position: absolute;
+            top: 0%;
+            right: 35%;
+        }
+        @media only screen and (min-width: 1100px) {
+            width: 360px;
+            top: 0%;
+            right: 40%;
+        }
+    }
+    &__ellipsetopregister {
+        display: none;
+        @media only screen and (min-width: 800px) {
+            display: block;
+            position: absolute;
+            top: 15%;
+            right: 25%;
+        }
+        @media only screen and (min-width: 1100px) {
+            top: 20%;
+            right: 30%;
+        }
+    }
+    &__ellipsebottomregister {
+        display: none;
+        @media only screen and (min-width: 800px) {
+            display: block;
+            position: absolute;
+            bottom: 0%;
+            left: 6%;
+        } 
+    }
+    .content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        text-align: justify;
+        margin-top: 9%;
+        margin-bottom: 8%;
+        color: #FFFFFF;
+        &__title {
+            font-size: 31px;
+            letter-spacing: 0.04em;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        &__question {
+            line-height: 20px;
+            font-size: 14px;
+            letter-spacing: 0.01em;
+        }
+    }
+    .categorie {
+        color: #FFFFFF;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        text-align: left;
+        margin-bottom: 20px;
+        &__title {
+            line-height: 20px;
+            font-size: 14px;
+            letter-spacing: 0.01em;
+            margin-bottom: 7px; 
+        }
+        &__input {
+            background: transparent;
+            line-height: 33px;
+            font-size: 23px;
+            letter-spacing: 0.01em;
+            color: #FFFFFF;
+            opacity: 0.3; 
+            border: none;
+            width: 100%;
+            border-bottom: 1.5px solid #FFFFFF;
+            padding-bottom: 7px;
+            font-family: Object Sans;
+        }
+    }
+}

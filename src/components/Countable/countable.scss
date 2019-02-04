@@ -36,6 +36,11 @@
             box-sizing: border-box;
             padding: 5px 0px;
             width: 100%;
+            &:hover {
+                background: linear-gradient(244.82deg, #E22828 3.9%, rgba(226, 40, 40, 0) 77.43%);
+                border: 1px solid #F81D27;
+                box-sizing: border-box;
+            }
             @media only screen and (min-width: 700px) {
                 padding: 8px 0px;
             }

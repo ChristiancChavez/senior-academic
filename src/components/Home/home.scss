@@ -4,6 +4,18 @@
     position: relative;
     padding: 40px;
     padding-bottom: 10px;
+    &__startevent {
+        color: black;
+        text-align: center;
+        font-size: 60px;
+        border-radius: 10px;
+        border: 2px solid #F81D27;
+        padding: 10px 20px;
+        position: absolute;
+        bottom: 9%;
+        left: 3%;
+        background: white;
+    }
     &__points {
         position: absolute;
         top: -15px;
@@ -35,6 +47,9 @@
             top: 0%;
             right: 30%;
             display: block;
+        }
+        @media only screen and (min-width: 1000px) {
+            right: 34%;
         }
         
     }

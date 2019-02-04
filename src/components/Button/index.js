@@ -1,9 +1,10 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './button.scss';
 
 const Button = () => (
-    <button className="button">
+    <Link className="button" to="/form">
       Regístrate ahora
-    </button>
+    </Link>
 );
 export default Button;
