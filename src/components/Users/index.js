@@ -20,7 +20,8 @@ class Users extends Component {
           id: user,
           name: users[user].name,
           age: users[user].age,
-          email: users[user].email
+          email: users[user].email,
+          image: users[user].image
         }));
 
         this.setState({
@@ -55,7 +56,7 @@ class Users extends Component {
   render() {
     const { users } = this.state;
     const { match: { params: { userId } } } = this.props;
-    let selectedUser = false;
+    let selectedUser;
     
     if (userId) {
       selectedUser = users.filter(user => user.id === userId);

@@ -1,18 +1,25 @@
 import React, { Component, Fragment } from 'react';
-import firebase from '../../firebase';
-import {storage} from '../../firebase';
+import firebase, { storage } from '../../firebase';
+import placeholder from '../../images/placeholder.jpg';
 
 class Form extends Component {
-  state = {
-    name: "",
-    age: "",
-    email: "",
-    users: [],
-    submitted: false,
-    error: false, 
-    image: null,
-    url: '',
+  constructor() {
+    super();
+    
+    this.state = {
+      name: "",
+      age: "",
+      email: "",
+      users: [],
+      submitted: false,
+      error: false, 
+      image: null,
+      url: placeholder,
+    }
+    
+    this.form = React.createRef();
   }
+
 
   componentDidMount() {
     const usersRef = firebase.database().ref('users');
@@ -52,60 +59,75 @@ class Form extends Component {
 
   handleUpload = () => {
     const { image } = this.state;
-    const uploadTask = storage.ref(`images/${image.name}`).put(image);
-    uploadTask.on('state_changed',
-    (snapshot) => {
+    storage.ref(`images/${image.name}`).put(image);
 
-    }, 
-    (error) => {
-      console.log(error);
-    },
-    () => {
-      storage.ref('images').child(image.name).getDownloadURL().then(url => {
-        console.log(url);
-        this.setState({
-          url 
-        })
-      })
-    });
+    const output = document.getElementById('output_image');
+
+    output.src = placeholder;
   }
 
   handleOnSubmit = e => {
     e.preventDefault();
 
-    const usersRef = firebase.database().ref('users');
+    this.form.current.reportValidity();
 
-    const { name, age, email } = this.state;
+    
+    const usersRef = firebase.database().ref('users');
+    
+    const { name, age, email, image } = this.state;
     const item = {
       name: name,
       age: age,
-      email: email
+      email: email,
+      image: image.name
     }
     
-    let a = false;
-  
+    let emailExists = false;
+    
     this.state.users.forEach(user => {
       if (user.email === item.email) {
-        a = true
+        emailExists = true
       }
     });
-
-    if (a) {
+    
+    if (emailExists) {
       this.setState({
         error: true
       });
       return
     }
-
+    
+    this.handleUpload();
     usersRef.push(item);
-
-
+    
     this.setState({
       name: '',
       age: '',
       email: '',
+      image: placeholder,
       submitted: true
     });
+  }
+
+  previewImage = (e) => {
+    if(!e.target.files[0]) {
+      const output = document.getElementById('output_image');
+    
+      output.src = placeholder;
+      return
+    };
+    let reader = new FileReader();
+    reader.onload = () => {
+      const output = document.getElementById('output_image');
+      output.src = reader.result
+    }
+
+    reader.readAsDataURL(e.target.files[0]);
+
+    if(e.target.files[0]) {
+      const image = e.target.files[0];
+      this.setState(() => ({image}));
+    }
   }
   
   render() {
@@ -113,13 +135,13 @@ class Form extends Component {
 
     return (
       <Fragment>
-        <form onSubmit={this.handleOnSubmit}>
-          <input value={name} onChange={this.handleOnChange} type="text" name="name" placeholder="Put your name here"/>
-          <input value={age} onChange={this.handleOnChange} type="number" name="age" placeholder="What's your age"/>
-          <input value={email} onChange={this.handleOnChange} type="email" name="email" placeholder="What's your email"/>
-          <input type="file" onChange={this.handleChangeImage}/>
-          <img src={url} alt="uploaded images" height="300px" width="400px"/>
-          <input type="submit" placeholder="Submit" onClick={this.handleUpload}/>
+        <form ref={this.form} onSubmit={this.handleOnSubmit}>
+          <input value={name} onChange={this.handleOnChange} type="text" name="name" placeholder="Put your name here" required />
+          <input value={age} onChange={this.handleOnChange} type="number" name="age" placeholder="What's your age" required />
+          <input value={email} onChange={this.handleOnChange} type="email" name="email" placeholder="What's your email" required />
+          <input type="file" accept="image/*" onChange={this.previewImage} required />
+          <img src={url} id="output_image" alt="uploaded images" height="300px" width="400px" />
+          <input type="submit" placeholder="Submit" />
         </form>
         
         {submitted ?
@@ -128,7 +150,7 @@ class Form extends Component {
         }
 
         {error ?
-          <h1>Chao</h1> :
+          <h1>The email {this.state.email} is already registered</h1> :
           null
         }
       </Fragment>
