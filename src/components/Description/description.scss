@@ -4,13 +4,12 @@
     justify-content: space-between;
     text-align: left;
     &__title {
-        font-weight: 800;
-        font-style: normal;
         line-height: 34px;
         font-size: 31px;
         letter-spacing: 0.04em;
         color: #FFFFFF;
-        margin:4% 0%;
+        margin: 3% 0%;
+        margin-top: 0%;
         &--red {
             color: #F81D27;  
         }
@@ -35,14 +34,15 @@
         }
     }
     &__advertisement {
+        padding-top: 2%;
         width: 290px;
-        font-weight: 200;
-        font-style: normal;
         line-height: 17px;
-        font-size: 12px;
+        font-size: 0.85em;
         letter-spacing: 0.01em;
         color: #FFFFFF;
-        margin-bottom: 5%;
+        font-weight: 400;
+        font-style: normal;
+        margin-bottom: -4%;
         @media only screen and (min-width: 550px) {
             font-size: 16px;
             width: 390px;
