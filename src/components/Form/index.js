@@ -8,7 +8,9 @@ class Form extends Component {
     
     this.state = {
       name: "",
-      age: "",
+      lastName: "",
+      number: "",
+      phone: "",
       email: "",
       users: [],
       submitted: false,
@@ -31,8 +33,10 @@ class Form extends Component {
         const newState = Object.keys(users).map(user => ({
           id: user,
           name: users[user].name,
-          age: users[user].age,
-          email: users[user].email
+          lastName: users[user].lastName,
+          number: users[user].age,
+          email: users[user].email,
+          phone: users[user].phone
         }));
 
         this.setState({
@@ -74,12 +78,14 @@ class Form extends Component {
     
     const usersRef = firebase.database().ref('users');
     
-    const { name, age, email, image } = this.state;
+    const { name, number, email, image, lastName, phone } = this.state;
     const item = {
       name: name,
-      age: age,
+      lastName: lastName,
+      number: number,
       email: email,
-      image: image.name
+      image: image.name,
+      phone: phone
     }
     
     let emailExists = false;
@@ -102,7 +108,8 @@ class Form extends Component {
     
     this.setState({
       name: '',
-      age: '',
+      lastName: '',
+      number: '',
       email: '',
       image: placeholder,
       submitted: true
@@ -131,14 +138,16 @@ class Form extends Component {
   }
   
   render() {
-    const { name, age, email, submitted, error, url } = this.state;
+    const { name, number, email, submitted, error, url, lastName, phone } = this.state;
 
     return (
       <Fragment>
         <form ref={this.form} onSubmit={this.handleOnSubmit}>
-          <input value={name} onChange={this.handleOnChange} type="text" name="name" placeholder="Put your name here" required />
-          <input value={age} onChange={this.handleOnChange} type="number" name="age" placeholder="What's your age" required />
-          <input value={email} onChange={this.handleOnChange} type="email" name="email" placeholder="What's your email" required />
+          <input value={name} onChange={this.handleOnChange} type="text" name="name" placeholder="Escribe tu nombre" required />
+          <input value={lastName} onChange={this.handleOnChange} type="text" name="lastName" placeholder="Escribe tu apellido" required />
+          <input value={number} onChange={this.handleOnChange} type="number" name="number" placeholder="Escribe tu cédula" required />
+          <input value={phone} onChange={this.handleOnChange} type="tel" name="phone" placeholder="Escribe tu telefono" />
+          <input value={email} onChange={this.handleOnChange} type="email" name="email" placeholder="Escribe tu correo" required />
           <input type="file" accept="image/*" onChange={this.previewImage} required />
           <img src={url} id="output_image" alt="uploaded images" height="300px" width="400px" />
           <input type="submit" placeholder="Submit" />
