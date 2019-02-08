@@ -1,6 +1,9 @@
 .countable {
     display: flex;
     flex-direction: column;
+    @media only screen and (min-width: 500px) {
+        margin-bottom: 1%;
+    }
     @media only screen and (min-width: 700px) {
         width: 500px;
     }
@@ -17,12 +20,15 @@
         margin-top: 2%;
         @media only screen and (min-width: 550px) {
             font-size: 1em;
+            margin-bottom: 4%;
         }
         @media only screen and (min-width: 700px) {
             text-align: left;
         }
         @media only screen and (min-width: 1000px) {
             font-size: 0.78em;
+            margin-bottom: 7%;
+            margin-top: 7%;
         }
     }
     .clock {
@@ -42,7 +48,7 @@
                 box-sizing: border-box;
             }
             @media only screen and (min-width: 700px) {
-                padding: 8px 0px;
+                padding: 8px px;
             }
             &__number {
                 font-weight: 200;
@@ -50,6 +56,10 @@
                 font-size: 2.71em;
                 color: #FFFFFF;
                 align-self: center;
+                @media only screen and (min-width: 1000px) {
+                    padding: 10px 2px;
+                    font-size: 2.75em;
+                }
             } 
             &__reference {
                 font-weight: 100;
@@ -58,7 +68,11 @@
                 letter-spacing: 0.35em;
                 color: #FFFFFF;
                 padding-bottom: 8%;
-                padding-top: 9%
+                padding-top: 9%;
+                @media only screen and (min-width: 1000px) {
+                    font-size: 0.78em;
+                    padding-bottom: 15%;
+                }
             }
         }
     }

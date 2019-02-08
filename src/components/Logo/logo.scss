@@ -10,5 +10,18 @@
             width: 270px;
             height: 65px;
         }
+        @media only screen and (min-width: 800px) {
+            width: 320px;
+            height: 90px;
+        }
+        @media only screen and (min-width: 1000px) {
+            margin-bottom: -1%;
+        }
+        @media only screen and (min-width: 1400px) {
+            margin-bottom: -2%;
+        }
+        @media only screen and (min-width: 1900px) {
+            margin-bottom: -3%;
+        }
     }
 }

@@ -3,7 +3,6 @@
     border: 1px solid #F81D27;
     box-sizing: border-box;
     border-radius: 4px;
-
     font-size: 1em;
     letter-spacing: 0.01em;
     color: #FFFFFF;
@@ -14,24 +13,37 @@
     text-align: center;
     text-decoration: none;
     @media only screen and (min-width: 550px) {
-        font-size: 20px;
-        padding: 15px 0px;
+        font-size: 1.42em;
+        margin-bottom: 2%;
     }
     @media only screen and (min-width: 700px) {
         width: 28%;
         position: absolute;
-        top: 8%;
-        right: 8%;
+        top: 11%;
+        right: 9%;
+        padding: 2% 0px;
+        font-size: 1.2em;
     }
     @media only screen and (min-width: 830px) {
-        width: 230px;
-        right: 4%;
+        width: 25%;
+        right: 8%;
     }
     @media only screen and (min-width: 1000px) {
         line-height: 19px;
-        font-size: 13px;
-        letter-spacing: 0.01em;
-        width: 150px;
-        padding: 10px 0px;
+        width: 20%;
+        padding: 12px 0px;
+        top: 10%;
+    }
+    @media only screen and (min-width: 1400px) {
+        width: 12%;
+    }
+    @media only screen and (min-width: 1600px) {
+        width: 10%;
+        padding: 15px 0px;
+        right: 6%;
+    }
+    @media only screen and (min-width: 1800px) {
+        right: 4%;
+        top: 8.5%;
     }
 }
