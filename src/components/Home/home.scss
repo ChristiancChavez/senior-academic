@@ -7,6 +7,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    position: relative;
     @media only screen and (min-width: 700px) {
         padding: 9%;
         padding-bottom: 3%;
@@ -34,7 +35,10 @@
     &__logo {
         position: absolute;
         top: 7%;
-        left: 4%;
+        left: 9%;
+        @media only screen and (min-width: 1000px) {
+        
+        }
     }
     &__points {
         position: absolute;

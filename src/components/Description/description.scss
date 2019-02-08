@@ -3,7 +3,7 @@
     flex-flow: column;
     justify-content: center;
     text-align: left;
-    margin-top: 15%;
+    margin-top: 28%;
     @media only screen and (min-width: 500px) {
         margin-top: 20%;
     }
@@ -14,14 +14,17 @@
         margin-top: 10%;
     }
     &__title {
-        line-height: 39px;
-        font-size: 39px;
+        line-height: 34px;
+        font-size: 31px;
         letter-spacing: 0.04em;
         color: #FFFFFF;
         margin: 3% 0%;
         margin-top: 0%;
         &--red {
             color: #F81D27;  
+        }
+        @media only screen and (min-width: 400px) {
+            width: 80%;
         }
         @media only screen and (min-width: 500px) {
             font-size: 42px;
@@ -35,7 +38,6 @@
         @media only screen and (min-width: 700px) {
             font-size: 55px;
             line-height: 50px;
-
         }
         @media only screen and (min-width: 730px) {
             width: 95%;
@@ -74,7 +76,7 @@
     &__advertisement {
         width: 100%;
         line-height: 17px;
-        font-size: 0.85em;
+        font-size: 12px;
         letter-spacing: 0.01em;
         color: #FFFFFF;
         font-weight: 400;
@@ -90,16 +92,7 @@
             line-height: 20px;
             font-size: 14px;
             letter-spacing: 0.01em;
-        }
-        @media only screen and (min-width: 1200px) {
-            width: 52%;
-        }
-        @media only screen and (min-width: 1440px) {
-            width: 47%;
-        }
-        @media only screen and (min-width: 1540px) {
-            width: 42%;
-            line-height: 21px;
+            max-width: 45.2%;
         }
     }
     
