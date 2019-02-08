@@ -2,20 +2,8 @@
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
-    @media only screen and (min-width: 550px) {
-        margin-top: 2%; 
-    }
-    @media only screen and (min-width: 760px) {
-        justify-content: flex-end;
-    }
     @media only screen and (min-width: 1000px) {
-        margin-top: -1%;
-    }
-    @media only screen and (min-width: 1200px) {
-        margin-top: -8%;
-    }
-    @media only screen and (min-width: 1700px) {
-        margin-top: -6%;
+        justify-content: flex-end;
     }
     &__hastag {
         color: white;

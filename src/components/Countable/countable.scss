@@ -2,13 +2,14 @@
     display: flex;
     flex-direction: column;
     @media only screen and (min-width: 500px) {
-        margin-bottom: 1%;
+        margin-bottom: 5%;
     }
     @media only screen and (min-width: 700px) {
         width: 500px;
     }
     @media only screen and (min-width: 1000px) {
         width: 360px;
+        margin-bottom: 7%;
     }
     
     &__title {
@@ -16,19 +17,14 @@
         text-align: center;
         letter-spacing: 0.23em;
         color: #FFFFFF;
-        margin-bottom: 5%;
-        margin-top: 2%;
+        margin-bottom: 2%;
         @media only screen and (min-width: 550px) {
             font-size: 1em;
-            margin-bottom: 4%;
-        }
-        @media only screen and (min-width: 700px) {
-            text-align: left;
         }
         @media only screen and (min-width: 1000px) {
-            font-size: 0.78em;
-            margin-bottom: 7%;
-            margin-top: 7%;
+            line-height: 17px;
+            font-size: 12px;
+            letter-spacing: 0.15em;
         }
     }
     .clock {
@@ -57,8 +53,9 @@
                 color: #FFFFFF;
                 align-self: center;
                 @media only screen and (min-width: 1000px) {
-                    padding: 10px 2px;
-                    font-size: 2.75em;
+                    line-height: 49px;
+                    font-size: 45px;
+                    text-align: center;
                 }
             } 
             &__reference {
@@ -70,8 +67,10 @@
                 padding-bottom: 8%;
                 padding-top: 9%;
                 @media only screen and (min-width: 1000px) {
-                    font-size: 0.78em;
-                    padding-bottom: 15%;
+                    line-height: 12px;
+                    font-size: 11px;
+                    text-align: center;
+                    letter-spacing: 0.35em;
                 }
             }
         }

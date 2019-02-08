@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 // import { Link } from 'react-router-dom';
-import Logo from '../Logo/index';
+import logo from '../../assets/images/logo.png';
 import Description from '../Description/index';
 import Countable from '../Countable/index';
 import Button from '../Button/index';
@@ -69,12 +69,12 @@ class Home extends Component {
     const { days, minutes, hours, seconds, message } = this.state;
     return (
       <div className="home">
-        <Logo />
         <Description />
         <Countable days={days} hours={hours} minutes={minutes} seconds={seconds}  leadingZero={this.leadingZero} />
         {message && <h1 className="home__startevent">LA CONVERSACIÓN HA INICIADO</h1>}
         <Button />
         <Social />
+        <img className="home__logo" src={logo} alt ="logo" />
         <img className="home__points" src={pointsTop} alt ="points" />
         <img className="home__circleright" src={circleRight} alt ="circle right" />
         <img className="home__circleleft" src={circleLeft} alt ="circle left" />

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import firebase from '../../firebase';
-import Logo from '../Logo/index';
+import logo from '../../assets/images/logo.png';
 import Social from '../Social/index';
 import Photo from '../Photo/index';
 import pointsRegisterTop from '../../assets/images/pointsregistertop.png';
@@ -114,7 +114,7 @@ class Form extends Component {
 
     return (
       <div className="register">
-        <Logo />
+        <img className="register__logo" src={logo} alt ="logo" />
         <img className="register__close" src={close} alt ="button to close" />
         <img className="register__pointsregistertop" src={pointsRegisterTop} alt ="pointsregistertop" />
         <img className="register__circletopregister" src={circleTopRegister} alt ="circletop" />

@@ -1,37 +1,43 @@
 .description {
     display: flex;
     flex-flow: column;
-    justify-content: space-between;
+    justify-content: center;
     text-align: left;
+    margin-top: 15%;
+    @media only screen and (min-width: 500px) {
+        margin-top: 20%;
+    }
+    @media only screen and (min-width: 600px) {
+        margin-top: 12%;
+    }
+    @media only screen and (min-width: 1000px) {
+        margin-top: 10%;
+    }
     &__title {
-        line-height: 34px;
-        font-size: 31px;
+        line-height: 39px;
+        font-size: 39px;
         letter-spacing: 0.04em;
         color: #FFFFFF;
         margin: 3% 0%;
         margin-top: 0%;
         &--red {
             color: #F81D27;  
-            @media only screen and (min-width: 960px) {
-                margin: 0px;
-            }
         }
         @media only screen and (min-width: 500px) {
-            font-size: 45px;
-            line-height: 45px;
+            font-size: 42px;
+            line-height: 42px;
             margin: 2% 0%;
         }
-        @media only screen and (min-width: 630px) {
+        @media only screen and (min-width: 590px) {
             font-size: 50px;
+            line-height: 50px;
         }
         @media only screen and (min-width: 700px) {
             font-size: 55px;
             line-height: 50px;
-            margin-bottom: 5%;
+
         }
-        @media only screen and (min-width: 765px) {
-            font-size: 57px;
-            line-height: 63px;
+        @media only screen and (min-width: 730px) {
             width: 95%;
         }
         @media only screen and (min-width: 800px) {
@@ -39,10 +45,11 @@
         }
         @media only screen and (min-width: 930px) {
             width: 69%;
-            margin: 0px;
         }
-        @media only screen and (min-width: 1100px) {
-            width: 55%;
+        @media only screen and (min-width: 1000px) {
+            line-height: 63px;
+            font-size: 57px;
+            letter-spacing: 0.04em;
         }
         @media only screen and (min-width: 1200px) {
             width: 49%;
@@ -55,7 +62,6 @@
         }
         @media only screen and (min-width: 1740px) {
             width: 34%;
-            margin-bottom: -5px;
         }
         @media only screen and (min-width: 1990px) {
             width: 29%;
@@ -66,7 +72,6 @@
         }
     }
     &__advertisement {
-        padding-top: 2%;
         width: 100%;
         line-height: 17px;
         font-size: 0.85em;
@@ -74,25 +79,17 @@
         color: #FFFFFF;
         font-weight: 400;
         font-style: normal;
-        margin-bottom: -4%;
         text-align: left;
-        @media only screen and (min-width: 550px) {
-            font-size: 14px;
-            margin-bottom: 0%;
-        }
-        @media only screen and (min-width: 700px) {
-            line-height: 18px;
-            margin-bottom: -4%;
+        @media only screen and (min-width: 500px) {
+            font-size: 0.90em;
         }
         @media only screen and (min-width: 850px) {
             width: 80%;
-            padding-top: 1%;
         }
         @media only screen and (min-width: 1000px) {
-            width: 75%;
-            font-size: 17px;
-            margin-top: 4%;
-            margin-bottom: -7%;
+            line-height: 20px;
+            font-size: 14px;
+            letter-spacing: 0.01em;
         }
         @media only screen and (min-width: 1200px) {
             width: 52%;
@@ -103,20 +100,6 @@
         @media only screen and (min-width: 1540px) {
             width: 42%;
             line-height: 21px;
-        }
-        @media only screen and (min-width: 1720px) {
-            width: 39%;
-            margin-bottom: -5%;
-            margin-top: 3%;
-        }
-        @media only screen and (min-width: 1850px) {
-            width: 34%;
-        }
-        @media only screen and (min-width:2000px) {
-            width: 31%;
-            margin-bottom: -4%;
-            margin-top: 2.5%;
-            line-height: 23px;
         }
     }
     

@@ -1,11 +1,13 @@
 .logo {
     display: flex;
     justify-content: flex-start;
+    position: relative;
     &__image {
-        top: 0%;
-        left: 0%;
+        top: 10%;
+        left: 20%;
         width: 206px;
         height: 53px;
+        position: absolute;
         @media only screen and (min-width: 550px) {
             width: 270px;
             height: 65px;
