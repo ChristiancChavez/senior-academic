@@ -9,7 +9,7 @@
     }
     @media only screen and (min-width: 1000px) {
         width: 360px;
-        margin-top: 3%;
+        margin-top: 1%;
         margin-bottom: 4%;
     }
     
@@ -53,11 +53,6 @@
                 font-size: 2.71em;
                 color: #FFFFFF;
                 align-self: center;
-                @media only screen and (min-width: 1000px) {
-                    line-height: 49px;
-                    font-size: 45px;
-                    text-align: center;
-                }
             } 
             &__reference {
                 font-weight: 100;
@@ -67,12 +62,6 @@
                 color: #FFFFFF;
                 padding-bottom: 8%;
                 padding-top: 9%;
-                @media only screen and (min-width: 1000px) {
-                    line-height: 12px;
-                    font-size: 11px;
-                    text-align: center;
-                    letter-spacing: 0.35em;
-                }
             }
         }
     }

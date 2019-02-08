@@ -2,24 +2,19 @@
     background: linear-gradient(180deg, #000000 47.6%, #230000 100%);
     height: 100%;
     position: relative;
-    padding: 9%;
-    padding-bottom: 3%;
+    padding: 7% 9% 3% 9%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     position: relative;
     @media only screen and (min-width: 700px) {
-        padding: 9%;
+        padding: 6%;
         padding-bottom: 3%;
     }
     @media only screen and (min-width: 1000px) {
-        padding: 4%;
-        padding-bottom: 3%;
+        padding: 3.5%;
     }
 
-    @media only screen and (min-width: 1450px) {
-        padding: 4%;
-    }
     // &__startevent {
     //     color: black;
     //     text-align: center;
@@ -36,8 +31,12 @@
         position: absolute;
         top: 7%;
         left: 9%;
+        @media only screen and (min-width: 700px) {
+            left: 6%;
+        }
         @media only screen and (min-width: 1000px) {
-        
+            left: 3.5%;
+            top: 6%;
         }
     }
     &__points {
@@ -88,35 +87,32 @@
         @media only screen and (min-width: 800px) {
             position: absolute;
             top: 0%;
-            right: 35%;
+            right: 14%;
             display: block;
-            width: 25%
         }
         @media only screen and (min-width: 1000px) {
-            right: 35%;
+            right: 30%;
         }
-        @media only screen and (min-width: 1900px) {
-            right: 35%;
-        }
-        
     }
     &__circlerightbig {
         display: none;
-        @media only screen and (min-width: 1200px) {
+        @media only screen and (min-width: 1000px) {
             position: absolute;
-            bottom: 17%;
+            bottom: 15%;
             right: 0%;
             display: block;
+            width: 28%;
         }
         
     }
     &__ellipsetop {
         display: none;
-        @media only screen and (min-width: 1000px) {
+        @media only screen and (min-width: 1300px) {
             position: absolute;
-            top: 25%;
-            right: 28%;
+            top: 23%;
+            right: 26%;
             display: block;
+            
         }
         @media only screen and (min-width: 1700px) {
             width: 2%;
@@ -130,8 +126,8 @@
         display: none;
         @media only screen and (min-width: 1000px) {
             position: absolute;
-            bottom: 29%;
-            left: 55%;
+            bottom: 22%;
+            left: 50%;
             display: block;
         }
         @media only screen and (min-width: 1200px) {
@@ -144,22 +140,16 @@
         @media only screen and (min-width: 1000px) {
             position: absolute;
             bottom: 0%;
-            left: 8%;
-            display: block;
-        }
-        @media only screen and (min-width: 1200px) {
-            left: 6%;
-        }
-        @media only screen and (min-width: 1700px) {
             left: 5%;
+            display: block;
         }
     }
     &__pointstopsquare {
         display: none;
-        @media only screen and (min-width: 1000px) {
+        @media only screen and (min-width: 1300px) {
             position: absolute;
             top: 0%;
-            right: 22%;
+            right: 18%;
             display: block;
         }
     }
@@ -167,21 +157,19 @@
         display: none;
         @media only screen and (min-width: 1000px) {
             position: absolute;
-            bottom: 14%;
-            left: 32.5%;
+            bottom: 10%;
+            left: 410px;
             display: block;
         }
-        @media only screen and (min-width: 1200px) {
-            bottom: 8%;
-            left: 30%;
-        }
+
     }
     &__pointsbottom {
         display: none;
-        @media only screen and (min-width: 1200px) {
+        @media only screen and (min-width: 1000px) {
             position: absolute;
             bottom: 0%;
             right: 39%;
+            height: 200px;
             display: block;
         }
     }
