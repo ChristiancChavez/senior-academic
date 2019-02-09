@@ -1,21 +1,16 @@
 .social {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
-    @media only screen and (min-width: 1000px) {
-        justify-content: flex-end;
-    }
-    &__hastag {
-        color: white;
-    }
-    &__line {
-        width: 91px;
-        height: 1px;
-        background: white;
-        margin-top: 10px;
-        @media only screen and (min-width: 550px) {
-            margin: 0px 15px;
-            margin-top: 10px;
-        }
-    }
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto !important;
+  &__hastag {
+    color: white;
+    font-weight: 300;
+    line-height: 20px;
+  }
+  &__line {
+    width: 91px;
+    height: 1px;
+    background: white;
+  }
 }

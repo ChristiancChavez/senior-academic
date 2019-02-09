@@ -1,68 +1,45 @@
 .countable {
+  margin-bottom: 5vh;
+  text-align: center;
+  &__title {
+    font-weight: 800;
+    font-size: 11px;
+    line-height: 16px;
+    letter-spacing: 0.23em;
+    color: #ffffff;
+    margin-bottom: 1.6vh;
+  }
+  .clock {
     display: flex;
-    flex-direction: column;
-    @media only screen and (min-width: 500px) {
-        margin-bottom: 5%;
+    .time {
+      border: 1px solid #c4c4c4;
+      padding: 14px 0 9px;
+      width: 74.5px;
+      &:hover {
+        background: linear-gradient(
+          244.82deg,
+          #e22828 3.9%,
+          rgba(226, 40, 40, 0) 77.43%
+        );
+        border: 1px solid #f81d27;
+      }
+      &__number {
+        display: block;
+        font-weight: 200;
+        line-height: 41px;
+        font-size: 38px;
+        color: #ffffff;
+        align-self: center;
+      }
+      &__reference {
+        display: block;
+        line-height: 10px;
+        font-size: 9px;
+        letter-spacing: 0.35em;
+        color: #ffffff;
+        padding-bottom: 4px;
+        font-weight: 300;
+      }
     }
-    @media only screen and (min-width: 700px) {
-        width: 500px;
-    }
-    @media only screen and (min-width: 1000px) {
-        width: 360px;
-        margin-top: 1%;
-        margin-bottom: 4%;
-    }
-    
-    &__title {
-        font-size: 0.78em;
-        text-align: center;
-        letter-spacing: 0.23em;
-        color: #FFFFFF;
-        margin-bottom: 2%;
-        @media only screen and (min-width: 550px) {
-            font-size: 1em;
-        }
-        @media only screen and (min-width: 1000px) {
-            line-height: 17px;
-            font-size: 12px;
-            letter-spacing: 0.15em;
-        }
-    }
-    .clock {
-        display: flex;
-        flex-flow: row nowrap;
-        .time {
-            display: flex;
-            flex-direction: column;
-            border: 1px solid #C4C4C4;
-            text-align: center;
-            box-sizing: border-box;
-            padding: 5px 0px;
-            width: 100%;
-            &:hover {
-                background: linear-gradient(244.82deg, #E22828 3.9%, rgba(226, 40, 40, 0) 77.43%);
-                border: 1px solid #F81D27;
-                box-sizing: border-box;
-            }
-            @media only screen and (min-width: 700px) {
-                padding: 8px px;
-            }
-            &__number {
-                font-weight: 200;
-                line-height: 40px;
-                font-size: 2.71em;
-                color: #FFFFFF;
-                align-self: center;
-            } 
-            &__reference {
-                font-weight: 100;
-                line-height: 10px;
-                font-size: 9px;
-                letter-spacing: 0.35em;
-                color: #FFFFFF;
-                padding-bottom: 8%;
-                padding-top: 9%;
-            }
-        }
-    }
+  }
 }

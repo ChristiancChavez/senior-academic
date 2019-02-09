@@ -1,40 +1,23 @@
 .button {
-    background: linear-gradient(112.69deg, #E22828 -31.6%, rgba(226, 40, 40, 0) 103.2%);
-    border: 1px solid #F81D27;
-    box-sizing: border-box;
-    border-radius: 4px;
-    font-size: 1em;
-    letter-spacing: 0.01em;
-    color: #FFFFFF;
-    width: 100%;
-    padding: 4% 0px;
-    font-family: Object Sans;
-    cursor: pointer;
-    text-align: center;
-    text-decoration: none;
-    @media only screen and (min-width: 550px) {
-        font-size: 1.42em;
-        margin-bottom: 2%;
-    }
-    @media only screen and (min-width: 700px) {
-        width: 28%;
-        position: absolute;
-        top: 6%;
-        right: 9%;
-        padding: 2% 0px;
-        font-size: 1.2em;
-    }
-    @media only screen and (min-width: 830px) {
-        width: 25%;
-        right: 8%;
-    }
-    @media only screen and (min-width: 1000px) {
-        width: 120px;
-        padding: 1% 0px;
-        font-size: 10px;
-        letter-spacing: 0.01em;
-        right: 4%;
-        margin-bottom: 0%;
-        top: 8%;
-    }
+  background: linear-gradient(
+    112.69deg,
+    #e22828 -31.6%,
+    rgba(226, 40, 40, 0) 103.2%
+  );
+  border: 1px solid #f81d27;
+  box-sizing: border-box;
+  border-radius: 4px;
+  line-height: 20px;
+  font-size: 14px;
+  letter-spacing: 0.01em;
+  color: #ffffff;
+  width: 100%;
+  padding: 10px 0px;
+  display: block;
+  text-align: center;
+  cursor: pointer;
+  text-decoration: none;
+  &--mobile {
+    margin-bottom: 5vh;
+  }
 }
