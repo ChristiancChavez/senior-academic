@@ -9,6 +9,8 @@
     color: #ffffff;
     margin-top: 0;
     max-width: 296px;
+    position: relative;
+    z-index: 10;
     &--red {
       color: #f81d27;
       margin-bottom: 0;
