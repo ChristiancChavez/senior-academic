@@ -1,4 +1,7 @@
 .logo {
   margin-bottom: 6vh;
   width: 206px;
+  @media only screen and (min-width: 630px) {
+    width: 254px;
+  }
 }

@@ -1,16 +1,21 @@
 .countable {
   margin-bottom: 5vh;
-  text-align: center;
   &__title {
     font-weight: 800;
     font-size: 11px;
     line-height: 16px;
     letter-spacing: 0.23em;
     color: #ffffff;
+    margin-top: 0;
     margin-bottom: 1.6vh;
+    text-align: left;
+    @media only screen and (max-width: 450px) {
+      text-align: center;
+    }
   }
   .clock {
     display: flex;
+    text-align: center;
     .time {
       border: 1px solid #c4c4c4;
       padding: 14px 0 9px;

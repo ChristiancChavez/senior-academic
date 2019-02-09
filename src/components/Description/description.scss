@@ -7,10 +7,17 @@
     font-size: 31px;
     letter-spacing: 0.04em;
     color: #ffffff;
+    margin-top: 0;
     margin-bottom: 4.5vh;
+    max-width: 296px;
     &--red {
       color: #f81d27;
       margin-bottom: 0;
+    }
+    @media only screen and (min-width: 630px) {
+      line-height: 63px;
+      font-size: 57px;
+      max-width: 564px;
     }
   }
   &__advertisement {
@@ -21,5 +28,11 @@
     letter-spacing: 0.01em;
     color: #ffffff;
     margin-bottom: 4.5vh;
+    max-width: 295px;
+    @media only screen and (min-width: 630px) {
+      line-height: 20px;
+      font-size: 14px;
+      max-width: 601px;
+    }
   }
 }
