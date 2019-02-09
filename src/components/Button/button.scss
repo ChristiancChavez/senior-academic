@@ -12,17 +12,29 @@
   letter-spacing: 0.01em;
   color: #ffffff;
   width: 100%;
-  padding: 10px 0px;
+  padding: 10px 0;
   display: block;
   text-align: center;
   cursor: pointer;
   text-decoration: none;
-  width: 100%;
-  max-width: 300px;
+  max-width: 310px;
   margin-top: 0;
-  margin-bottom: 6vh;
   @media only screen and (max-width: 650px) {
-    margin-left: auto;
     margin-right: auto;
+  }
+  &--mobile {
+    @media only screen and (min-width: 631px) {
+      display: none;
+    }
+  }
+  &--desktop {
+    display: inline-block;
+    max-width: initial;
+    width: initial;
+    padding-left: 19px;
+    padding-right: 19px;
+    @media only screen and (max-width: 630px) {
+      display: none;
+    }
   }
 }

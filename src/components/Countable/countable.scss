@@ -1,5 +1,4 @@
 .countable {
-  margin-bottom: 5vh;
   &__title {
     font-weight: 800;
     font-size: 11px;
@@ -7,10 +6,15 @@
     letter-spacing: 0.23em;
     color: #ffffff;
     margin-top: 0;
-    margin-bottom: 1.6vh;
+    margin-bottom: 11px;
     text-align: left;
     @media only screen and (max-width: 450px) {
       text-align: center;
+    }
+    @media only screen and (min-width: 630px) {
+      line-height: 17px;
+      font-size: 12px;
+      letter-spacing: 0.15em;
     }
   }
   .clock {
@@ -19,7 +23,10 @@
     .time {
       border: 1px solid #c4c4c4;
       padding: 14px 0 9px;
-      width: 74.5px;
+      width: 75.5px;
+      @media only screen and (min-width: 630px) {
+        width: 94px;
+      }
       &:hover {
         background: linear-gradient(
           244.82deg,
@@ -35,6 +42,10 @@
         font-size: 38px;
         color: #ffffff;
         align-self: center;
+        @media only screen and (min-width: 630px) {
+          line-height: 49px;
+          font-size: 45px;
+        }
       }
       &__reference {
         display: block;
@@ -44,6 +55,11 @@
         color: #ffffff;
         padding-bottom: 4px;
         font-weight: 300;
+        @media only screen and (min-width: 630px) {
+          line-height: 12px;
+          font-size: 11px;
+          letter-spacing: 0.35em;
+        }
       }
     }
   }

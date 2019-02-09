@@ -79,7 +79,7 @@ class Home extends Component {
         {message && (
           <h1 className="home__startevent">LA CONVERSACIÓN HA INICIADO</h1>
         )}
-        <Button />
+        <Button className="button--mobile" />
         <Social />
         <img className="home__points" src={pointsTop} alt="points" />
         <img

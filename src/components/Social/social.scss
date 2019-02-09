@@ -2,7 +2,11 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 500px;
+  max-width: 310px;
+  margin-bottom: 5px;
+  @media only screen and (min-width: 651px) {
+    margin-left: auto;
+  }
   &__hastag {
     color: white;
     font-weight: 300;
