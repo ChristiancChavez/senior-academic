@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from 'react';
+import * as Yup from 'yup';
 import { Formik, Field, ErrorMessage } from 'formik';
 import Social from '../Social';
 import firebase from '../../firebase';
@@ -62,6 +63,11 @@ const DateInputWithLabel = ({ label, isRequired, className }) => (
   </div>
 );
 
+const schema = Yup.object().shape({
+  name: Yup.string().required("El jorge es gay"),
+  email: Yup.string().required('Jorge es maricon').email('invalid email').test("duplicate email", "El email ya esta registrado", val => val !== "andresfch23@gmail.com")
+});
+
 class Form extends Component {
   render() {
     const { isRegisterActive } = this.props;
@@ -89,6 +95,9 @@ class Form extends Component {
             pl_vision: '',
             personal_vision: ''
           }}
+
+          validationSchema={schema}
+
           onSubmit={({ ...props }) => {
             // PRIMATE ACÁ HACES TU MAGIA
             console.warn({ ...props }, 'eche!!!');

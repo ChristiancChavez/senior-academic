@@ -12,7 +12,7 @@ const Button = ({
     ? () => onSubmitForm()
     : () => onChangeRegisterFormStatus(true);
   return (
-    <button className={`button ${className}`} onClick={onClickFun}>
+    <button className={`button ${className}`} onClick={onClickFun} type={isAform ? 'submit' : ''}>
       {children}
     </button>
   );
