@@ -1,10 +1,21 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import './button.scss';
 
-const Button = ({ className }) => (
-  <Link className={`button ${className}`} to="/form">
-    Regístrate ahora
-  </Link>
-);
+const Button = ({
+  className,
+  onChangeRegisterFormStatus,
+  isAform,
+  onSubmitForm,
+  children
+}) => {
+  const onClickFun = isAform
+    ? () => onSubmitForm()
+    : () => onChangeRegisterFormStatus(true);
+  return (
+    <button className={`button ${className}`} onClick={onClickFun}>
+      {children}
+    </button>
+  );
+};
+
 export default Button;

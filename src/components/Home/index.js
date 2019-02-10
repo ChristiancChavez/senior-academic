@@ -1,21 +1,13 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 // import { Link } from 'react-router-dom';
 import Description from '../Description';
 import Countable from '../Countable';
 import Button from '../Button';
 import Social from '../Social';
 import Logo from '../Logo';
-import circleRight from '../../assets/images/circlerightmobil.png';
-import circleLeft from '../../assets/images/circleleftmobil.png';
-import pointsTop from '../../assets/images/pointstop.png';
-import circleTop from '../../assets/images/circletop.png';
-import circleRightBig from '../../assets/images/circleright.png';
-import ellipseTop from '../../assets/images/ellipsetop.png';
-import ellipseMiddle from '../../assets/images/ellipsemiddle.png';
-import ellipseBottom from '../../assets/images/ellipsebottom.png';
-import pointsTopSquare from '../../assets/images/pointstopsquare.png';
-import pointsMiddle from '../../assets/images/pointsmiddleleft.png';
-import pointsBottom from '../../assets/images/pointsbottom.png';
+import Form from '../Form';
+import HomeImages from '../HomeImages';
+
 import './home.scss';
 
 class Home extends Component {
@@ -24,7 +16,7 @@ class Home extends Component {
     hours: 0,
     minutes: 0,
     seconds: 0,
-    message: false
+    isRegisterActive: false
   };
 
   componentWillMount() {
@@ -63,65 +55,39 @@ class Home extends Component {
     return num < 10 ? '0' + num : num;
   };
 
+  onChangeRegisterFormStatus = isRegisterActive => {
+    this.setState({ isRegisterActive });
+  };
+
   render() {
-    const { days, minutes, hours, seconds, message } = this.state;
+    const { days, minutes, hours, seconds, isRegisterActive } = this.state;
     return (
-      <div className="home">
-        <Logo />
-        <Description />
-        <Countable
-          days={days}
-          hours={hours}
-          minutes={minutes}
-          seconds={seconds}
-          leadingZero={this.leadingZero}
+      <div className={`${isRegisterActive ? 'register' : 'home'}`}>
+        <Logo
+          onChangeRegisterFormStatus={this.onChangeRegisterFormStatus}
+          isRegisterActive={isRegisterActive}
         />
-        {message && (
-          <h1 className="home__startevent">LA CONVERSACIÓN HA INICIADO</h1>
+        {!isRegisterActive && (
+          <Fragment>
+            <Description />
+            <Countable
+              days={days}
+              hours={hours}
+              minutes={minutes}
+              seconds={seconds}
+              leadingZero={this.leadingZero}
+            />
+            <Button
+              className="button--mobile"
+              onChangeRegisterFormStatus={this.onChangeRegisterFormStatus}
+            >
+              Regístrate ahora
+            </Button>
+          </Fragment>
         )}
-        <Button className="button--mobile" />
-        <Social />
-        <img className="home__points" src={pointsTop} alt="points" />
-        <img
-          className="home__circleright"
-          src={circleRight}
-          alt="circle right"
-        />
-        <img className="home__circleleft" src={circleLeft} alt="circle left" />
-        <img className="home__circletop" src={circleTop} alt="circletop" />
-        <img
-          className="home__circlerightbig"
-          src={circleRightBig}
-          alt="circle right big"
-        />
-        <img className="home__ellipsetop" src={ellipseTop} alt="ellipse Top" />
-        <img
-          className="home__ellipsemiddle"
-          src={ellipseMiddle}
-          alt="ellipse Middle"
-        />
-        <img
-          className="home__ellipsebottom"
-          src={ellipseBottom}
-          alt="ellipse Bottom"
-        />
-        <img
-          className="home__pointstopsquare"
-          src={pointsTopSquare}
-          alt="points Top Square"
-        />
-        <img
-          className="home__pointsmiddle"
-          src={pointsMiddle}
-          alt="points Middle"
-        />
-        <img
-          className="home__pointsbottom"
-          src={pointsBottom}
-          alt="points Bottom"
-        />
-        {/* <Link to="/form">User register</Link>
-        <Link to="/users">List of Users</Link> */}
+        {isRegisterActive && <Form isRegisterActive={isRegisterActive} />}
+        {!isRegisterActive && <Social isRegisterActive={isRegisterActive} />}
+        {!isRegisterActive && <HomeImages />}
       </div>
     );
   }

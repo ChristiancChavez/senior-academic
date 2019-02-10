@@ -5,6 +5,7 @@
   "dependencies": {
     "bootstrap": "^4.2.1",
     "firebase": "^5.8.1",
+    "formik": "^1.5.0",
     "node-sass": "^4.11.0",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",

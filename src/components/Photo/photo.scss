@@ -1,47 +1,44 @@
 .photo {
+  &__title {
+    line-height: 20px;
+    font-size: 14px;
+    letter-spacing: 0.01em;
+    color: #ffffff;
+    text-align: left;
+    margin-bottom: 20px;
+  }
+  .option {
     display: flex;
-    flex-flow: column;
-    justify-items: space-around;
-    margin-bottom: 25px;
-    @media only screen and (min-width: 550px) {
-        width: 450px;
+    align-items: center;
+    padding: 15px 0;
+    &__img {
+      background: linear-gradient(
+        23.11deg,
+        #e22828 -45.49%,
+        rgba(226, 40, 40, 0) 81.12%
+      );
+      border: 1px solid #f81d27;
+      box-sizing: border-box;
+      border-radius: 50px;
+      padding: 10px;
+      width: 51px;
+      margin-right: 20px;
     }
-    &__title {
-        line-height: 20px;
-        font-size: 14px;
-        letter-spacing: 0.01em;
-        color: #FFFFFF;
-        text-align: left;
-        margin-bottom: 20px;
+    &__btn {
+      background: linear-gradient(
+        105.08deg,
+        rgba(255, 255, 255, 0.12) -31.77%,
+        rgba(255, 255, 255, 0) 90.71%
+      );
+      border: 1px solid #ffffff;
+      box-sizing: border-box;
+      border-radius: 4px;
+      line-height: 16px;
+      font-size: 11px;
+      letter-spacing: 0.01em;
+      color: #ffffff;
+      padding: 11px 32px 11px;
+      cursor: pointer;
     }
-    .option {
-        display: flex;
-        flex-flow: row nowrap;
-        justify-content: space-between;
-        align-items: center;
-        &__img {
-            background: linear-gradient(23.11deg, #E22828 -45.49%, rgba(226, 40, 40, 0) 81.12%);
-            border: 1px solid #F81D27;
-            box-sizing: border-box;
-            border-radius: 50px;
-            padding: 15px;
-        }
-        &__btn {
-            background: linear-gradient(105.08deg, rgba(255, 255, 255, 0.12) -31.77%, rgba(255, 255, 255, 0) 90.71%);
-            border: 1px solid #FFFFFF;
-            box-sizing: border-box;
-            border-radius: 4px;
-            line-height: 19px;
-            font-size: 13px;
-            letter-spacing: 0.01em;
-            color: #FFFFFF;
-            width: 60%;
-            height: 40px;
-            font-family: Object Sans;
-            @media only screen and (min-width: 500px) {
-                width: 262px;
-                font-size: 15px;
-            }
-        }
-    }
+  }
 }

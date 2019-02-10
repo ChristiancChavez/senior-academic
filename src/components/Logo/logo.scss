@@ -1,6 +1,5 @@
 .logo {
   width: 206px;
-  margin-top: 10px;
   @media only screen and (min-width: 630px) {
     width: 254px;
   }
@@ -8,5 +7,22 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-top: 10px;
   }
+  &__close-btn {
+    cursor: pointer;
+    width: 37px;
+  }
+}
+
+.mb-0 {
+  margin-bottom: 0;
+}
+
+.mb-35 {
+  margin-bottom: 35px;
+}
+
+.mt-25 {
+  margin-top: 25px;
 }

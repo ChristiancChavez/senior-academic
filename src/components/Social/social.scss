@@ -7,14 +7,29 @@
   @media only screen and (min-width: 651px) {
     margin-left: auto;
   }
+  @media only screen and (max-width: 650px) {
+    margin-top: 15px;
+  }
   &__hastag {
     color: white;
     font-weight: 300;
     line-height: 20px;
   }
   &__line {
-    width: 91px;
+    width: 41px;
     height: 1px;
     background: white;
   }
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @media only screen and (max-width: 650px) {
+      display: block;
+    }
+  }
+}
+
+.mr-25 {
+  margin-right: 25px;
 }
