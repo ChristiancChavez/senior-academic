@@ -1,0 +1,44 @@
+.users {
+  background: linear-gradient(180deg, #000000 47.6%, #230000 100%);
+  min-height: 100vh;
+  padding: 0 4% 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  @media only screen and (max-width: 630px) {
+    padding: 0 10% 0;
+  }
+  &__list {
+    text-align: center;
+    list-style-type: none;
+    font-size: 18px;
+  }
+  &__user {
+    line-height: 25px;
+  }
+  &__title {
+    font-size: 35px;
+    color: #f81d27;
+  }
+  &__info {
+    text-align: left;
+    list-style-type: none;
+    font-size: 18px;
+    float: left;
+    margin-top: 10%;
+    & li {
+      line-height: 40px;
+      & span {
+        color: #f81d27;
+        margin-right: 10px;
+      }
+    }
+  }
+  &__image {
+    float: right;
+    margin-right: 50px;
+    width: 320px;
+    margin-top: 5%;
+  }
+}

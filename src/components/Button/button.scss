@@ -40,4 +40,10 @@
       display: none;
     }
   }
+  &__users {
+    position: absolute;
+    right: 6%;
+    top: 50%;
+    z-index: 1;
+  }
 }

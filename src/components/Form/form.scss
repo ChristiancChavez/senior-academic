@@ -297,6 +297,7 @@
     outline: none;
     width: 100%;
     margin-right: 20px;
+    margin-bottom: 10px;
     &--small {
       max-width: 79px;
       text-align: center;
@@ -308,6 +309,22 @@
   &__flex {
     display: flex;
     flex-wrap: wrap;
+    &--error {
+      justify-content: flex-end;
+    }
+  }
+  &__error {
+    color: red;
+    margin-bottom: 4px;
+    &--date {
+      max-width: 90px;
+      padding: 0 4px;
+    }
+  }
+  &__image {
+    position: absolute;
+    right: 0%;
+    bottom: 25%;
   }
 }
 .flex-grow1 {
@@ -324,4 +341,12 @@
 
 .mr-25 {
   margin-right: 25px;
+}
+
+.positionImg {
+  position: relative;
+}
+
+#file {
+  display: none;
 }

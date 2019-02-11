@@ -7,6 +7,7 @@ import Social from '../Social';
 import Logo from '../Logo';
 import Form from '../Form';
 import HomeImages from '../HomeImages';
+import { Link } from 'react-router-dom';
 
 import './home.scss';
 
@@ -83,6 +84,9 @@ class Home extends Component {
             >
               Regístrate ahora
             </Button>
+            <button className="button button__users">
+              <Link to="/users" style={{ color: 'white', textDecoration: 'none' }}>List of users</Link> 
+            </button>
           </Fragment>
         )}
         {isRegisterActive && <Form isRegisterActive={isRegisterActive} />}

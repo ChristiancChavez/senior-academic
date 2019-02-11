@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import firebase from '../../firebase';
 import User from './User';
+import logo from '../../assets/images/seniors-logo.png';
+import './users.scss';
 
 
 class Users extends Component {
@@ -19,8 +21,15 @@ class Users extends Component {
         const newState = Object.keys(users).map(user => ({
           id: user,
           name: users[user].name,
-          age: users[user].age,
-          email: users[user].email
+          last_name: users[user].last_name,
+          email: users[user].email,
+          day: users[user].day,
+          month: users[user].month,
+          year: users[user].year,
+          city: users[user].city,
+          pl_vision: users[user].pl_vision,
+          personal_vision: users[user].personal_vision,
+          image: users[user].image
         }));
 
         this.setState({
@@ -31,11 +40,11 @@ class Users extends Component {
   }
 
   renderUsers = users => (
-    <ul>
-      <h1>LIST OF USERS</h1>
+    <ul className="users__list">
+      <h1 className="users__title">USERS</h1>
       {users.map((user, key) => (
-        <li key={key}>
-          <Link to={`users/${user.id}`}>{user.name}</Link>
+        <li className="users__user" key={key}>
+          <Link to={`users/${user.id}`} style={{ color: "white", textDecoration: "none" }}>{user.name} {user.last_name}</Link>
         </li>
       ))}
     </ul>
@@ -43,12 +52,12 @@ class Users extends Component {
 
   renderUserInfo = info => {
     return(
-      <div>
+      <ul className="users__list">
       {info.map(each => (
           <User info={each} key={each.id} />
         )
       )}
-      </div>
+      </ul>
   )
 };
 
@@ -62,7 +71,11 @@ class Users extends Component {
     }
     
     return( 
-      <div>
+      <div className="users">
+        <div className='mt-25'>
+          <img className="logo" src={logo} alt="Senior Academic Logo" />
+        </div>
+
         {selectedUser ?
           this.renderUserInfo(selectedUser) :
           this.renderUsers(users) 
