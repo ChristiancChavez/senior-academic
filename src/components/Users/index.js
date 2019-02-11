@@ -41,7 +41,7 @@ class Users extends Component {
 
   renderUsers = users => (
     <ul className="users__list">
-      <h1 className="users__title">USERS</h1>
+      <h1 className="users__title">Usuarios</h1>
       {users.map((user, key) => (
         <li className="users__user" key={key}>
           <Link to={`users/${user.id}`} style={{ color: "white", textDecoration: "none" }}>{user.name} {user.last_name}</Link>

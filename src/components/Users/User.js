@@ -42,7 +42,7 @@ class User extends Component {
   
   return(
     <Fragment>
-      <h1 className="users__title">User information</h1>
+      <h1 className="users__title">Información del ususario</h1>
       <ul className="users__info">
         <li><span>Nombre:</span> {name} {last_name}</li>
         <li><span>Email:</span> {email}</li>
