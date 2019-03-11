@@ -1,0 +1,63 @@
+.countable {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 35px;
+    @media only screen and (min-width: 700px) {
+        width: 500px;
+    }
+    @media only screen and (min-width: 1000px) {
+        width: 360px;
+    }
+    
+    &__title {
+        font-size: 11px;
+        text-align: center;
+        letter-spacing: 0.23em;
+        color: #FFFFFF;
+        margin-bottom: 10px;
+        @media only screen and (min-width: 550px) {
+            font-size: 14px;
+        }
+        @media only screen and (min-width: 700px) {
+            text-align: left;
+        }
+        @media only screen and (min-width: 1000px) {
+            font-size: 11px;
+        }
+    }
+    .clock {
+        display: flex;
+        flex-flow: row nowrap;
+        .time {
+            display: flex;
+            flex-direction: column;
+            border: 1px solid #C4C4C4;
+            text-align: center;
+            box-sizing: border-box;
+            padding: 5px 0px;
+            width: 100%;
+            &:hover {
+                background: linear-gradient(244.82deg, #E22828 3.9%, rgba(226, 40, 40, 0) 77.43%);
+                border: 1px solid #F81D27;
+                box-sizing: border-box;
+            }
+            @media only screen and (min-width: 700px) {
+                padding: 8px 0px;
+            }
+            &__number {
+                font-weight: 200;
+                line-height: 41px;
+                font-size: 38px;
+                color: #FFFFFF;
+                align-self: center;
+            } 
+            &__reference {
+                line-height: 10px;
+                font-size: 9px;
+                letter-spacing: 0.35em;
+                color: #FFFFFF;
+                padding-bottom: 4px;
+            }
+        }
+    }
+}

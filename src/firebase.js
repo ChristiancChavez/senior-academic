@@ -7,5 +7,9 @@ const config = {
     storageBucket: "seniors-academic-839c7.appspot.com",
     messagingSenderId: "361716339409"
 };
+
 firebase.initializeApp(config);
-export default firebase;
+const storage = firebase.storage();
+export {
+    storage, firebase as default
+}
