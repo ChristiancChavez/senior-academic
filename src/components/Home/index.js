@@ -96,9 +96,9 @@ class Home extends Component {
             >
               Regístrate ahora
             </Button>
-            <button className="button button__users">
+            {/* <button className="button button__users">
               <Link to="/users" style={{ color: 'white', textDecoration: 'none' }}>List of users</Link> 
-            </button>
+            </button> */}
           </Fragment>
         )}
         {isRegisterActive && <Form isRegisterActive={isRegisterActive} />}

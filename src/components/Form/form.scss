@@ -324,7 +324,13 @@
   &__image {
     position: absolute;
     right: 0%;
-    bottom: 25%;
+    bottom: 50%;
+    @media only screen and (min-width: 638px) {
+      right: -5%;
+    }
+    @media only screen and (min-width: 800px) {
+      right: 0%;
+    }
   }
 }
 .flex-grow1 {

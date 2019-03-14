@@ -55,11 +55,7 @@
     right: 6%;
     top: 50%;
     z-index: 1;
-    opacity: 0;
-    animation-duration: 2s;
-    animation-delay: 3s;
-    animation-name: slideright;
-    animation-fill-mode: forwards;
+    
   }
 }
 @keyframes slideright {
