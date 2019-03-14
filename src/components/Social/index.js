@@ -9,19 +9,16 @@ import './social.scss';
 const Social = ({ onSubmitForm, isRegisterActive }) => (
   <div className={`social__container ${isRegisterActive ? 'mb-35 mt-25' : ''}`}>
     {isRegisterActive && (
-      <div>
-        <Button isAform onSubmitForm={onSubmitForm}>
-          Completar registro
-        </Button>
-      </div>
+      <Button className="registerMobil" isAform onSubmitForm={onSubmitForm}>
+        Completar registro
+      </Button>
+
     )}
-    <div>
-      <div className="social">
-        <span className="social__hastag mr-25">#SomosSenior</span>
-        <div className="social__line mr-25" />
-        <a className="social__icon social__icon--face" href="https://www.w3schools.com"><img src={facebook} alt="facebook" /></a>
-        <a className="social__icon" href="https://www.w3schools.com"><img src={instagram} alt="instagram" /></a>
-      </div>
+    <div className="social">
+      <span className="social__hastag mr-25">#SomosSenior</span>
+      <div className="social__line mr-25" />
+      <a className="social__icon social__icon--face" href="https://www.w3schools.com"><img src={facebook} alt="facebook" /></a>
+      <a className="social__icon" href="https://www.w3schools.com"><img src={instagram} alt="instagram" /></a>
     </div>
   </div>
 );

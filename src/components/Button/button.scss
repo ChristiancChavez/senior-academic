@@ -21,8 +21,6 @@
   margin-top: 0;
   outline: none;
   padding-left: 19px;
-  animation-duration: 2s;
-  animation-name: slideright;
   padding-right: 19px;
   @media only screen and (max-width: 650px) {
     margin-right: auto;
@@ -50,12 +48,21 @@
       display: none;
     }
   }
+  
   &__users {
     position: absolute;
     right: 6%;
     top: 50%;
     z-index: 1;
     
+  }
+}
+.registerMobil {
+  width: 100%;
+  @media only screen and (min-width: 650px) {
+    position: absolute;
+    left: 4%;
+    bottom: 3%;
   }
 }
 @keyframes slideright {
@@ -67,6 +74,21 @@
     right: 4%;
   }
   70% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideright1 {
+  from {
+    opacity: 1;
+
+  }
+  to {
+  }
+  5% {
     opacity: 1;
   }
   100% {
