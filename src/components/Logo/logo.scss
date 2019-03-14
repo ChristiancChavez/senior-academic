@@ -33,7 +33,10 @@
   }
   &__close-btn {
     cursor: pointer;
-    width: 37px;
+    width: 25px;
+    @media only screen and (min-width: 800px) {
+      width: 37px;
+    }
   }
 }
 
