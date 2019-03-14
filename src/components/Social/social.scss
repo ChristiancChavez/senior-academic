@@ -5,6 +5,11 @@
   max-width: 310px;
   margin-bottom: 3px;
   position: relative;
+  opacity: 0;
+  animation-duration: 2s;
+  animation-delay: 4s;
+  animation-name: slidesocial;
+  animation-fill-mode: forwards;
   
   @media only screen and (min-width: 651px) {
     margin-left: auto;
@@ -24,6 +29,7 @@
   }
   &__icon {
     cursor: pointer;
+    padding-top: 2px;
     &--face {
       margin-right: 5%;
     }
@@ -39,11 +45,7 @@
     @media only screen and (min-width: 1000px) {
       justify-content: flex-end;
       position: relative;
-      opacity: 0;
-      animation-duration: 2s;
-      animation-delay: 4s;
-      animation-name: slidesocial;
-      animation-fill-mode: forwards;
+      
     }
   }
 }
