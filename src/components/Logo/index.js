@@ -4,9 +4,9 @@ import Button from '../Button';
 import close from '../../assets/images/close.png';
 import './logo.scss';
 
-const Logo = ({ onChangeRegisterFormStatus, isRegisterActive }) => (
+const Logo = ({ onChangeRegisterFormStatus, isRegisterActive, classShowLogo }) => (
   <div className={`logo__container ${isRegisterActive ? 'mb-35' : ''}`}>
-    <img className="logo" src={logo} alt="Senior Academic Logo" />
+    <img className='logo' src={logo} alt="Senior Academic Logo" />
     {!isRegisterActive ? (
       <div>
         <Button

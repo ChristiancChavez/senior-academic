@@ -6,6 +6,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  overflow: hidden;
   @media only screen and (max-width: 630px) {
     padding: 0 10% 0;
   }
@@ -35,6 +36,7 @@
     right: 0%;
     @media only screen and (min-width: 1000px) {
       display: none;
+      
     }
   }
   &__circleleft {
@@ -55,15 +57,25 @@
     }
     @media only screen and (min-width: 1000px) {
       right: 34%;
+      opacity: 0;
+      animation-name: bottomsappeartop;
+      animation-duration: 1s;
+      animation-delay: 2s;
+      animation-fill-mode: forwards;
     }
   }
   &__circlerightbig {
     display: none;
-    @media only screen and (min-width: 1300px) {
+    @media only screen and (min-width: 1000px) {
       position: absolute;
       top: 23%;
       right: 0%;
       display: block;
+      opacity: 0;
+      animation-name: bottomsappear;
+      animation-duration: 2s;
+      animation-delay: 2s;
+      animation-fill-mode: forwards;
     }
   }
   &__ellipsetop {
@@ -79,9 +91,14 @@
     display: none;
     @media only screen and (min-width: 1000px) {
       position: absolute;
-      bottom: 29%;
+      bottom: 30%;
       left: 45%;
       display: block;
+      animation-name: slidemiddlepoint;
+      animation-delay: 6s;
+      animation-duration: 1s;
+      animation-fill-mode: forwards;
+      opacity: 0;
     }
     @media only screen and (min-width: 1200px) {
       bottom: 24%;
@@ -92,9 +109,14 @@
     display: none;
     @media only screen and (min-width: 1000px) {
       position: absolute;
-      bottom: 0%;
+      bottom: -2%;
       left: 5%;
       display: block;
+      animation-name: slideuppoint;
+      animation-delay: 5s;
+      animation-duration: 1s;
+      animation-fill-mode: forwards;
+      opacity: 0;
     }
     @media only screen and (min-width: 1200px) {
       left: 4%;
@@ -126,10 +148,91 @@
     display: none;
     @media only screen and (min-width: 1200px) {
       position: absolute;
-      bottom: 0%;
+      bottom: -8%;
       right: 40%;
       height: 230px;
       display: block;
+      animation-name: appearpoints;
+      animation-delay: 4s;
+      animation-duration: 1s;
+      animation-fill-mode: forwards;
+      opacity: 0;
     }
+  }
+}
+@keyframes bottomsappear {
+  from {
+    opacity: 0;
+    right: -8%;
+  }
+
+  to {
+    right: 0%;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes bottomsappeartop {
+  from {
+    opacity: 0;
+    top: -10%;
+  }
+  to {
+    top: 0%;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes appearpoints {
+  from {
+    opacity: 0;
+    bottom: -10%;
+  }
+  to {
+    bottom: 0%;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes slideuppoint {
+  from {
+    opacity: 0;
+    bottom: -2%;
+  }
+  to {
+    bottom: 0%;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes slidemiddlepoint {
+  from {
+    opacity: 0;
+    bottom: 30%;
+  }
+  to {
+    bottom: 29%;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
   }
 }

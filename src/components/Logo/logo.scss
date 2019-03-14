@@ -1,7 +1,29 @@
 .logo {
   width: 206px;
+  position: relative;
+  animation-duration: 2s;
+  animation-name: slidein;
   @media only screen and (min-width: 630px) {
     width: 254px;
+    position: relative;
+    animation-duration: 2s;
+    animation-name: slidein;
+  }
+
+  @keyframes slidein {
+    from {
+      left: -40%;
+    }
+  
+    to {
+      left: 0%;
+    }
+    50% {
+      filter: brightness(0%)
+    }
+    80% {
+      filter: brightness(100%)
+    }
   }
   &__container {
     display: flex;

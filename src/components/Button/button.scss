@@ -21,6 +21,8 @@
   margin-top: 0;
   outline: none;
   padding-left: 19px;
+  animation-duration: 2s;
+  animation-name: slideright;
   padding-right: 19px;
   @media only screen and (max-width: 650px) {
     margin-right: auto;
@@ -36,6 +38,14 @@
     width: initial;
     padding-left: 19px;
     padding-right: 19px;
+    opacity: 0;
+    animation-duration: 2s;
+    animation-delay: 3s;
+    animation-name: slideright;
+    animation-fill-mode: forwards;
+    position: absolute;
+    top: 10%;
+    right: -1%;
     @media only screen and (max-width: 630px) {
       display: none;
     }
@@ -45,5 +55,25 @@
     right: 6%;
     top: 50%;
     z-index: 1;
+    opacity: 0;
+    animation-duration: 2s;
+    animation-delay: 3s;
+    animation-name: slideright;
+    animation-fill-mode: forwards;
+  }
+}
+@keyframes slideright {
+  from {
+    opacity: 0;
+    right: -1%;
+  }
+  to {
+    right: 4%;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
   }
 }

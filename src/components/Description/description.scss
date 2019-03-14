@@ -1,5 +1,11 @@
 .description {
   text-align: left;
+  position: relative;
+  opacity: 0;
+  animation-duration: 2s;
+  animation-delay: 2s;
+  animation-name: slidetext;
+  animation-fill-mode: forwards;
   &__title {
     font-weight: 800;
     font-style: normal;
@@ -8,7 +14,7 @@
     letter-spacing: 0.04em;
     color: #ffffff;
     margin-top: 0;
-    max-width: 296px;
+    max-width: 296px; 
     position: relative;
     z-index: 10;
     &--red {
@@ -34,5 +40,20 @@
       font-size: 14px;
       max-width: 601px;
     }
+  }
+}
+@keyframes slidetext {
+  from {
+    opacity: 0;
+    margin-top: 5%;
+  }
+  to {
+    margin-top: 0%;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
   }
 }

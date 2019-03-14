@@ -17,15 +17,19 @@ class Home extends Component {
     hours: 0,
     minutes: 0,
     seconds: 0,
-    isRegisterActive: false
+    isRegisterActive: false,
+    classShowLogo: false,
   };
 
   componentWillMount() {
     this.getRestTime();
-  }
+    this.showlogo();
+  };
+
   componentDidMount() {
     setInterval(() => this.getRestTime(), 1000);
-  }
+    
+  };
 
   closeInterval = () => {
     clearInterval(this.interval);
@@ -52,6 +56,13 @@ class Home extends Component {
       });
     }
   };
+
+  showlogo = () => {
+    this.setState({
+      classShowLogo: true,
+    })
+  };
+
   leadingZero = num => {
     return num < 10 ? '0' + num : num;
   };
@@ -61,12 +72,13 @@ class Home extends Component {
   };
 
   render() {
-    const { days, minutes, hours, seconds, isRegisterActive } = this.state;
+    const { days, minutes, hours, seconds, isRegisterActive, classShowLogo } = this.state;
     return (
       <div className={`${isRegisterActive ? 'register' : 'home'}`}>
         <Logo
           onChangeRegisterFormStatus={this.onChangeRegisterFormStatus}
           isRegisterActive={isRegisterActive}
+          classShowLogo={classShowLogo}
         />
         {!isRegisterActive && (
           <Fragment>

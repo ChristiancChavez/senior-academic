@@ -4,6 +4,13 @@
   align-items: center;
   max-width: 310px;
   margin-bottom: 5px;
+  position: absolute;
+  bottom: 10%;
+  opacity: 0;
+  animation-duration: 2s;
+  animation-delay: 4s;
+  animation-name: slidesocial;
+  animation-fill-mode: forwards;
   @media only screen and (min-width: 651px) {
     margin-left: auto;
   }
@@ -20,16 +27,38 @@
     height: 1px;
     background: white;
   }
+  &__icon {
+    cursor: pointer;
+    &--face {
+      margin-right: 5%;
+    }
+  }
   &__container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    @media only screen and (max-width: 650px) {
-      display: block;
+    position: relative;
+    @media only screen and (min-width: 800px) {
+      justify-content: flex-end;
     }
   }
 }
 
 .mr-25 {
   margin-right: 25px;
+}
+@keyframes slidesocial {
+  from {
+    opacity: 0;
+    right: -1%;
+  }
+  to {
+    right: 0px;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
 }
