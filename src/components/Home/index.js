@@ -7,7 +7,6 @@ import Social from '../Social';
 import Logo from '../Logo';
 import Form from '../Form';
 import HomeImages from '../HomeImages';
-import { Link } from 'react-router-dom';
 
 import './home.scss';
 
@@ -19,6 +18,7 @@ class Home extends Component {
     seconds: 0,
     isRegisterActive: false,
     classShowLogo: false,
+    isAnimationActive: true,
   };
 
   componentWillMount() {
@@ -71,24 +71,33 @@ class Home extends Component {
     this.setState({ isRegisterActive });
   };
 
+  disableAnimation = () => {
+    this.setState({
+      isAnimationActive: false,
+    })
+  };
+
   render() {
-    const { days, minutes, hours, seconds, isRegisterActive, classShowLogo } = this.state;
+    const { days, minutes, hours, seconds, isRegisterActive, classShowLogo, isAnimationActive } = this.state;
     return (
       <div className={`${isRegisterActive ? 'register' : 'home'}`}>
         <Logo
           onChangeRegisterFormStatus={this.onChangeRegisterFormStatus}
           isRegisterActive={isRegisterActive}
           classShowLogo={classShowLogo}
+          disableAnimation={this.disableAnimation}
+          isAnimationActive={isAnimationActive}
         />
         {!isRegisterActive && (
           <Fragment>
-            <Description />
+            <Description isAnimationActive={isAnimationActive} />
             <Countable
               days={days}
               hours={hours}
               minutes={minutes}
               seconds={seconds}
               leadingZero={this.leadingZero}
+              isAnimationActive={isAnimationActive}
             />
             <Button
               className="button--mobile"
@@ -102,8 +111,8 @@ class Home extends Component {
           </Fragment>
         )}
         {isRegisterActive && <Form isRegisterActive={isRegisterActive} />}
-        {!isRegisterActive && <Social isRegisterActive={isRegisterActive} />}
-        {!isRegisterActive && <HomeImages />}
+        {!isRegisterActive && <Social isRegisterActive={isRegisterActive} isAnimationActive={isAnimationActive} />}
+        {!isRegisterActive && <HomeImages isAnimationActive={isAnimationActive} />}
       </div>
     );
   }

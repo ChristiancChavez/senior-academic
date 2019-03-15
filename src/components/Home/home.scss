@@ -57,11 +57,13 @@
     }
     @media only screen and (min-width: 1000px) {
       right: 34%;
-      opacity: 0;
-      animation-name: bottomsappeartop;
-      animation-duration: 1s;
-      animation-delay: 2s;
-      animation-fill-mode: forwards;
+      &-bottomsappeartop {
+        opacity: 0;
+        animation-name: bottomsappeartop;
+        animation-duration: 1s;
+        animation-delay: 2s;
+        animation-fill-mode: forwards;
+      }
     }
   }
   &__circlerightbig {
@@ -71,11 +73,13 @@
       top: 23%;
       right: 0%;
       display: block;
-      opacity: 0;
-      animation-name: bottomsappear;
-      animation-duration: 2s;
-      animation-delay: 2s;
-      animation-fill-mode: forwards;
+      &-bottomsappear { 
+        opacity: 0;
+        animation-name: bottomsappear;
+        animation-duration: 2s;
+        animation-delay: 2s;
+        animation-fill-mode: forwards;
+      }
     }
   }
   &__ellipsetop {
@@ -94,11 +98,13 @@
       bottom: 30%;
       left: 45%;
       display: block;
-      animation-name: slidemiddlepoint;
-      animation-delay: 6s;
-      animation-duration: 1s;
-      animation-fill-mode: forwards;
-      opacity: 0;
+      &-slidemiddlepoint {
+        animation-name: slidemiddlepoint;
+        animation-delay: 6s;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+        opacity: 0;
+      }
     }
     @media only screen and (min-width: 1200px) {
       bottom: 24%;
@@ -112,11 +118,13 @@
       bottom: -2%;
       left: 5%;
       display: block;
-      animation-name: slideuppoint;
-      animation-delay: 5s;
-      animation-duration: 1s;
-      animation-fill-mode: forwards;
-      opacity: 0;
+      &-slideuppoint {
+        animation-name: slideuppoint;
+        animation-delay: 5s;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+        opacity: 0;
+      }
     }
     @media only screen and (min-width: 1200px) {
       left: 4%;
@@ -152,11 +160,13 @@
       right: 40%;
       height: 230px;
       display: block;
-      animation-name: appearpoints;
-      animation-delay: 4s;
-      animation-duration: 1s;
-      animation-fill-mode: forwards;
-      opacity: 0;
+      &-appearpoints {
+        animation-name: appearpoints;
+        animation-delay: 4s;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+        opacity: 0;
+      }
     }
   }
 }

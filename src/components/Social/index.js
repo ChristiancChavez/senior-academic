@@ -6,7 +6,7 @@ import Button from '../Button';
 
 import './social.scss';
 
-const Social = ({ onSubmitForm, isRegisterActive }) => (
+const Social = ({ onSubmitForm, isRegisterActive, isAnimationActive }) => (
   <div className={`social__container ${isRegisterActive ? 'mb-35 mt-25' : ''}`}>
     {isRegisterActive && (
       <Button className="registerMobil" isAform onSubmitForm={onSubmitForm}>
@@ -14,7 +14,7 @@ const Social = ({ onSubmitForm, isRegisterActive }) => (
       </Button>
 
     )}
-    <div className="social">
+    <div className={`social ${ isAnimationActive ? 'social-animation' : ''}`}>
       <span className="social__hastag mr-25">#SomosSenior</span>
       <div className="social__line mr-25" />
       <a className="social__icon social__icon--face" href="https://www.w3schools.com"><img src={facebook} alt="facebook" /></a>

@@ -1,11 +1,13 @@
 .description {
   text-align: left;
   position: relative;
-  opacity: 0;
-  animation-duration: 2s;
-  animation-delay: 2s;
-  animation-name: slidetext;
-  animation-fill-mode: forwards;
+  &-slidetext {
+    opacity: 0;
+    animation-duration: 2s;
+    animation-delay: 2s;
+    animation-name: slidetext;
+    animation-fill-mode: forwards;
+  }
   &__title {
     font-weight: 800;
     font-style: normal;

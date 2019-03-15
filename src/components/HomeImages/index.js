@@ -13,6 +13,7 @@ import pointsBottom from '../../assets/images/pointsbottom.png';
 
 export default class HomeImages extends Component {
   render() {
+    const { isAnimationActive } = this.props;
     return (
       <Fragment>
         <img className="home__points" src={pointsTop} alt="points" />
@@ -22,20 +23,20 @@ export default class HomeImages extends Component {
           alt="circle right"
         />
         <img className="home__circleleft" src={circleLeft} alt="circle left" />
-        <img className="home__circletop" src={circleTop} alt="circletop" />
+        <img className={`home__circletop ${isAnimationActive ? 'home__circletop-bottomsappeartop' : ''}`} src={circleTop} alt="circletop" />
         <img
-          className="home__circlerightbig"
+          className={`home__circlerightbig ${isAnimationActive ? 'home__circlerightbig-bottomsappear' : ''}`}
           src={circleRightBig}
           alt="circle right big"
         />
         <img className="home__ellipsetop" src={ellipseTop} alt="ellipse Top" />
         <img
-          className="home__ellipsemiddle"
+          className={`home__ellipsemiddle ${isAnimationActive ? 'home__ellipsemiddle-slidemiddlepoint' : ''}`}
           src={ellipseMiddle}
           alt="ellipse Middle"
         />
         <img
-          className="home__ellipsebottom"
+          className={`home__ellipsebottom ${isAnimationActive ? 'home__ellipsebottom-slideuppoint' : ''}`}
           src={ellipseBottom}
           alt="ellipse Bottom"
         />
@@ -50,7 +51,7 @@ export default class HomeImages extends Component {
           alt="points Middle"
         />
         <img
-          className="home__pointsbottom"
+          className={`home__pointsbottom ${isAnimationActive ? 'home__pointsbottom-appearpoints' : ''}`}
           src={pointsBottom}
           alt="points Bottom"
         />

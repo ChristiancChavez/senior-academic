@@ -2,7 +2,7 @@ import React from 'react';
 import './countable.scss';
 
 const Countable = ( props ) => (
-  <div className="countable">
+  <div className={`countable ${ props.isAnimationActive ? 'countable-slidecountable' : ''}`}>
     <h5 className="countable__title">EL ENTRENAMIENTO EMPIEZA EN:</h5>
     <div className="clock">
         <span className="time">

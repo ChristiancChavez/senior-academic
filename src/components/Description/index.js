@@ -1,8 +1,8 @@
 import React from 'react';
 import './description.scss';
 
-const Description = () => (
-    <div className="description">
+const Description = ({ isAnimationActive }) => (
+    <div className={`description ${ isAnimationActive ? 'description-slidetext' : ''}`}>
         <h1 className="description__title">
             LA POSIBILIDAD DE UNA NUEVA <span className="description__title description__title--red">CONVERSACIÓN</span> 
         </h1>

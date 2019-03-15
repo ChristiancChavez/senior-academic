@@ -1,13 +1,12 @@
 .logo {
   width: 206px;
-  position: relative;
-  animation-duration: 2s;
-  animation-name: slidein;
-  @media only screen and (min-width: 630px) {
-    width: 254px;
+  &-slidein {
     position: relative;
     animation-duration: 2s;
     animation-name: slidein;
+  }
+  @media only screen and (min-width: 630px) {
+    width: 254px;
   }
 
   @keyframes slidein {

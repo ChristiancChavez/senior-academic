@@ -4,13 +4,13 @@ import Button from '../Button';
 import close from '../../assets/images/close.png';
 import './logo.scss';
 
-const Logo = ({ onChangeRegisterFormStatus, isRegisterActive, classShowLogo }) => (
-  <div className={`logo__container ${isRegisterActive ? 'mb-35' : ''}`}>
+const Logo = ({ onChangeRegisterFormStatus, isRegisterActive, classShowLogo, disableAnimation, isAnimationActive }) => (
+  <div className={`logo__container ${isRegisterActive ? 'mb-35' : ''} ${ isAnimationActive ? 'logo-slidein' : ''}`}> 
     <img className='logo' src={logo} alt="Senior Academic Logo" />
     {!isRegisterActive ? (
       <div>
         <Button
-          className="button--desktop"
+          className={`button--desktop ${ isAnimationActive ? 'button--desktop-slideright' : ''}`}
           onChangeRegisterFormStatus={onChangeRegisterFormStatus}
         >
           Regístrate ahora
@@ -21,7 +21,10 @@ const Logo = ({ onChangeRegisterFormStatus, isRegisterActive, classShowLogo }) =
         className="logo__close-btn"
         src={close}
         alt="button to close"
-        onClick={() => onChangeRegisterFormStatus(false)}
+        onClick={() => { 
+          disableAnimation(); 
+          onChangeRegisterFormStatus(false);
+        }}
       />
     )}
   </div>
