@@ -12,13 +12,24 @@ const Social = ({ onSubmitForm, isRegisterActive, isAnimationActive }) => (
       <Button className="registerMobil" isAform onSubmitForm={onSubmitForm}>
         Completar registro
       </Button>
-
     )}
-    <div className={`social ${ isAnimationActive ? 'social-animation' : ''}`}>
+    <div className={`social ${isAnimationActive ? 'social-animation' : ''}`}>
       <span className="social__hastag mr-25">#YoSoySeniorElite</span>
       <div className="social__line mr-25" />
-      <a className="social__icon social__icon--face" href="fb.me/seniorsgroup.org"><img src={facebook} alt="facebook" /></a>
-      <a className="social__icon" href="https://www.instagram.com/seniors.group/"><img src={instagram} alt="instagram" /></a>
+      <a
+        className="social__icon social__icon--face"
+        target="_blank"
+        href="https://fb.me/seniorsgroup.org"
+      >
+        <img src={facebook} alt="facebook" />
+      </a>
+      <a
+        className="social__icon"
+        target="_blank"
+        href="https://www.instagram.com/seniors.group/"
+      >
+        <img src={instagram} alt="instagram" />
+      </a>
     </div>
   </div>
 );
