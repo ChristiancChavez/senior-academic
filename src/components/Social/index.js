@@ -15,10 +15,10 @@ const Social = ({ onSubmitForm, isRegisterActive, isAnimationActive }) => (
 
     )}
     <div className={`social ${ isAnimationActive ? 'social-animation' : ''}`}>
-      <span className="social__hastag mr-25">#SomosSenior</span>
+      <span className="social__hastag mr-25">#YoSoySeniorElite</span>
       <div className="social__line mr-25" />
-      <a className="social__icon social__icon--face" href="https://www.w3schools.com"><img src={facebook} alt="facebook" /></a>
-      <a className="social__icon" href="https://www.w3schools.com"><img src={instagram} alt="instagram" /></a>
+      <a className="social__icon social__icon--face" href="fb.me/seniorsgroup.org"><img src={facebook} alt="facebook" /></a>
+      <a className="social__icon" href="https://www.instagram.com/seniors.group/"><img src={instagram} alt="instagram" /></a>
     </div>
   </div>
 );

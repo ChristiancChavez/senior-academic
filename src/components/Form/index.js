@@ -5,7 +5,6 @@ import Social from '../Social';
 import firebase, { storage } from '../../firebase';
 // import Photo from '../Photo';
 // import RegisterImages from '../RegisterImages';
-import gps from '../../assets/images/gps.png';
 import vectorPhoto from '../../assets/images/Vectorphoto.png';
 import './form.scss';
 
@@ -28,10 +27,6 @@ const InputWithLabel = ({
       className="form__input"
       placeholder={placeholder}
     />
-    {img ?
-      <img className="form__image" src={gps} alt="ubicación" /> :
-      null
-    }
     <ErrorMessage className="form__error" name={name} component="div" />
   </div>
 );
@@ -258,15 +253,14 @@ class Form extends Component {
                   placeholder="Escribe el nombre de tu ciudad"
                   containerClass="flex-grow1"
                   isRequired
-                  img
                 />
               </div>
               <div className="form__flex">
                 <InputWithLabel
                   name="pl_vision"
-                  label="¿Cual es tu Visión PL?"
+                  label="¿En qué visión y ciudad te graduaste?"
                   type="text"
-                  placeholder="Escribe tu Visión PL"
+                  placeholder="Ej: Visión CC4-1 Barranquilla"
                   containerClass="flex-grow1 mr-50"
                   isRequired
                 />
