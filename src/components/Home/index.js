@@ -36,7 +36,7 @@ class Home extends Component {
   };
 
   getRestTime = () => {
-    const finalDate = 'April 13, 2019, 14:00:00';
+    const finalDate = 'November 23, 2019, 08:15:00';
     const time = Date.parse(finalDate) - Date.parse(new Date());
     const seconds = Math.floor((time / 1000) % 60);
     const minutes = Math.floor((time / 1000 / 60) % 60);
